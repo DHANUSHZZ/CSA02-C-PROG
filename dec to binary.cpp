@@ -1,22 +1,42 @@
-#include <stdio.h>
+#include < stdio.h >
 
-int main() {
-    int decimalNumber, binaryNumber[32], i = 0;
+int main()
+{
+    int num, bin = 0, rem = 0, place = 1;
 
-    printf("Enter a decimal number: ");
-    scanf("%d", &decimalNumber);
+    printf("Enter a decimal number\n");
+    scanf("%d", &num);
 
-    while (decimalNumber > 0) {
-        binaryNumber[i] = decimalNumber % 2;
-        decimalNumber = decimalNumber / 2;
-        i++;
+    printf("\nBinary equivalent of %d is ", num);
+    while(num)
+    {
+        rem   = num % 2;
+        num   = num / 2;
+        bin   = bin + (rem * place);
+        place = place * 10;
     }
-
-    printf("The binary number is: ");
-    for (int j = i - 1; j >= 0; j--) {
-        printf("%d", binaryNumber[j]);
-    }
+    printf("%d\n", bin);
 
     return 0;
 }
+
+
+
+
+
+
+
+
+
+ 
+  
+
+
+ 
+
+ 
+    
+
+
+
 
